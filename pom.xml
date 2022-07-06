@@ -137,10 +137,12 @@
                         <bundleVersion>${bundle.version}</bundleVersion>
                         <!-- for Android -->
                         <versionCode>${version.code}</versionCode>
+                        <!--
                         <providedKeyStorePath>${provided.keystore.path}</providedKeyStorePath>
                         <providedKeyStorePassword>${provided.keystore.password}</providedKeyStorePassword>
                         <providedKeyAlias>${provided.key.alias}</providedKeyAlias>
                         <providedKeyAliasPassword>${provided.key.alias.password}</providedKeyAliasPassword>
+                        -->
                     </releaseConfiguration>
                 </configuration>
             </plugin>
