@@ -26,6 +26,7 @@
  */
 package com.gluonhq.hello;
 
+import com.gluonhq.attach.browser.BrowserService;
 import com.gluonhq.attach.display.DisplayService;
 import com.gluonhq.attach.util.Platform;
 import com.gluonhq.charm.glisten.application.AppManager;
@@ -60,6 +61,15 @@ public class HelloGluonApp extends Application {
 
             imageView.setFitHeight(200);
             imageView.setPreserveRatio(true);
+
+            imageView.onMouseClickedProperty().set(e -> {
+              try {
+                System.out.println(" ########################### Link: " + "https://openduke.com");
+                BrowserService.create().get().launchExternalBrowser("https://openduke.com");
+              } catch (Exception ex) {
+                ex.printStackTrace();
+              }
+            });
 
             Label label = new Label("Hello, Gluon Mobile!");
             VBox root = new VBox(20, imageView, label);
